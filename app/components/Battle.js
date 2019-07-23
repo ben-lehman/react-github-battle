@@ -175,7 +175,7 @@ export default class Battle extends React.Component {
               : <PlayerPreview
                   username={playerTwo}
                   label='Player Two'
-                  onReset={() => this.handleReset('playerOne')}
+                  onReset={() => this.handleReset('playerTwo')}
                 />
             }
           </div>
