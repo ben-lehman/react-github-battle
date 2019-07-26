@@ -5,6 +5,8 @@ import { FaCompass, FaBriefcase, FaUsers, FaUserFriends, FaCode, FaUser }  from 
 import Card from './Card.js'
 import Loading from './Loading.js'
 import Tooltip from './Tooltip.js'
+import queryString from 'query-string'
+import { Link } from 'react-router-dom'
 
 const styles = {
   container: {
@@ -80,7 +82,7 @@ export default class Results extends React.Component {
   }
 
   componentDidMount () {
-    const { playerOne, playerTwo, onReset } = this.props
+    const { playerOne, playerTwo } = queryString.parse(this.props.location.search)
 
     battle([playerOne, playerTwo])
       .then((players) => {
@@ -133,20 +135,14 @@ export default class Results extends React.Component {
             <ProfileList profile={loser.profile} />
           </Card>
         </div>
-        <button
-          onClick={this.props.onReset}
+        <Link
+          to='/battle'
           className="btn dark-btn btn-space"
         >
           Reset
-        </button>
+        </Link>
 
       </React.Fragment>
     )
   }
-}
-
-Results.propTypes = {
-  playerOne: PropTypes.string.isRequired,
-  playerTwo: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired
 }
