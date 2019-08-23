@@ -3,7 +3,7 @@ Small react app that displays the most popular github repos based on programming
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/830fbe23-c86d-4afd-b143-5d6ae112a914/deploy-status)](https://app.netlify.com/sites/thirsty-lichterman-96c56e/deploys)
 
-[View Demo](https://app.netlify.com/sites/thirsty-lichterman-96c56e)
+[View Demo](https://thirsty-lichterman-96c56e.netlify.com/)
 
 
 ## Installation
